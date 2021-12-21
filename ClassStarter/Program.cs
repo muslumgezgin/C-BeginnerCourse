@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using ClassStarter.hr;
+
 namespace ClassStarter;
 
 class Program
@@ -14,6 +16,11 @@ class Program
             PartnerName = "Hatun"
         };
 
+        // we use static method that does not neeeded to create an object
+        var newNumber = Person.multipleNumber(3, 2);
+
+        Console.WriteLine(newNumber);
+
         Person muslum = new Person("Muslum", 30, "hatun");
         // here we call the second constructor that takes
         // name age and partnername
@@ -23,30 +30,5 @@ class Program
 
     }
 
-
-    class Person
-    {
-        public string? Name { get; init; }
-
-        public int? Age { get; set; }
-
-        public string? PartnerName { get; set; }
-
-        public Person()
-        {
-
-        }
-
-        public Person(string name, int age, string partnername)
-        {
-            Name = name;
-            Age = age;
-            PartnerName = partnername;
-
-        }
-
-
-
-    }
 
 }
